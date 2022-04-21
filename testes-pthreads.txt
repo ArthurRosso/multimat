@@ -1,0 +1,6 @@
+Teste com N=10
+gcc :
+Teste com N=10
+gcc :
+Teste com N=10
+gcc :

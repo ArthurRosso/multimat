@@ -235,8 +235,8 @@ int main(int argc, char *argv[])
    double *timings[8];
    double mean[8], sigma[8];
    int nb_exp = 8;
-   double start;
-   double end;
+   struct timeval start;
+   struct timeval end;
 
    if (argc != 2)
    {
@@ -270,59 +270,59 @@ int main(int argc, char *argv[])
    for (j = 0; j < nb_exp; j++)
    {
       /* ijk babaca */
-      start = DCLOCK();
+      gettimeofday(&start, NULL);
       ijk(N, C, A, B);
-      end = DCLOCK();
-      timings[0][j] = end-start;
+      gettimeofday(&end, NULL);
+      timings[0][j] = (end.tv_sec - start.tv_sec) * 1000000 + end.tv_usec - start.tv_usec;
       for (i = 0; i < N * N; i++)
          C[i] = 0;
       /* ijk otimizado */
-      start = DCLOCK();
+      gettimeofday(&start, NULL);
       ijk_buffer(N, C, A, B);
-      end = DCLOCK();
-      timings[1][j] = end-start;
+      gettimeofday(&end, NULL);
+      timings[1][j] = (end.tv_sec - start.tv_sec) * 1000000 + end.tv_usec - start.tv_usec;
       for (i = 0; i < N * N; i++)
          C[i] = 0;
       /* ijk buffer unrolled  */
-      start = DCLOCK();
+      gettimeofday(&start, NULL);
       ijk_buffer_unroll(N, C, A, B);
-      end = DCLOCK();
-      timings[2][j] = end-start;
+      gettimeofday(&end, NULL);
+      timings[2][j] = (end.tv_sec - start.tv_sec) * 1000000 + end.tv_usec - start.tv_usec;
       for (i = 0; i < N * N; i++)
          C[i] = 0;
       /* jki_best */
-      start = DCLOCK();
+      gettimeofday(&start, NULL);
       jki_best(N, C, A, B);
-      end = DCLOCK();
-      timings[3][j] = end-start;
+      gettimeofday(&end, NULL);
+      timings[3][j] = (end.tv_sec - start.tv_sec) * 1000000 + end.tv_usec - start.tv_usec;
       for (i = 0; i < N * N; i++)
          C[i] = 0;
       /* jki_best_unroll(N, C, A, B) ; */
-      start = DCLOCK();
+      gettimeofday(&start, NULL);
       jki_best_unroll(N, C, A, B);
-      end = DCLOCK();
-      timings[4][j] = end-start;
+      gettimeofday(&end, NULL);
+      timings[4][j] = (end.tv_sec - start.tv_sec) * 1000000 + end.tv_usec - start.tv_usec;
       for (i = 0; i < N * N; i++)
          C[i] = 0;
       /* jki_blocos(N, C, A, B) ; */
-      start = DCLOCK();
+      gettimeofday(&start, NULL);
       jki_blocos(N, C, A, B);
-      end = DCLOCK();
-      timings[5][j] = end-start;
+      gettimeofday(&end, NULL);
+      timings[5][j] = (end.tv_sec - start.tv_sec) * 1000000 + end.tv_usec - start.tv_usec;
       for (i = 0; i < N * N; i++)
          C[i] = 0;
       /* ikj_blocos_unroll(N, C, A, B) ; */
-      start = DCLOCK();
+      gettimeofday(&start, NULL);
       jki_blocos_unroll(N, C, A, B);
-      end = DCLOCK();
-      timings[6][j] = end-start;
+      gettimeofday(&end, NULL);
+      timings[6][j] = (end.tv_sec - start.tv_sec) * 1000000 + end.tv_usec - start.tv_usec;
       for (i = 0; i < N * N; i++)
          C[i] = 0;
       /* ikj_worst(N, C, A, B) ; */
-      start = DCLOCK();
+      gettimeofday(&start, NULL);
       ikj_worst(N, C, A, B);
-      end = DCLOCK();
-      timings[7][j] = end-start;
+      gettimeofday(&end, NULL);
+      timings[7][j] = (end.tv_sec - start.tv_sec) * 1000000 + end.tv_usec - start.tv_usec;
       for (i = 0; i < N * N; i++)
          C[i] = 0;
    }

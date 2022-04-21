@@ -1,0 +1,49 @@
+all: produto_gcc produto_icx produto_dpcpp produto_clang
+
+produto_gcc: produto_gcc.o
+	@gcc produto_gcc.o -o produto_gcc -lm -Ofast -march=native -mtune=native
+
+produto_gcc.o: produto.c
+	@gcc -c produto.c -o produto_gcc.o
+
+produto_icx: produto_icx.o
+	@icx produto_icx.o -o produto_icx -O3
+
+produto_icx.o: produto.c
+	@icx -w -c produto.c -o produto_icx.o
+
+produto_dpcpp: produto_dpcpp.o
+	@dpcpp produto_dpcpp.o -o produto_dpcpp
+
+produto_dpcpp.o: produto.c
+	@dpcpp -c produto.c -o produto_dpcpp.o
+
+produto_clang: produto_clang.o 
+	@clang produto_clang.o -o produto_clang -lm -Ofast -march=native -mtune=native
+
+produto_clang.o: produto.c
+	@clang -c produto.c -o produto_clang.o
+
+clean:
+	@rm produto_gcc produto_gcc.o produto_icx produto_icx.o produto_dpcpp produto_dpcpp.o produto_clang produto_clang.o
+
+run:
+	@echo "Teste com N=10" >> testes.txt && echo "gcc :" >> testes.txt && ./produto_gcc 10 >> testes.txt && echo "icx :" >> testes.txt && ./produto_icx 10 >> testes.txt && echo "dpcpp :" >> testes.txt && ./produto_dpcpp 10 >> testes.txt && echo "clang :" >> testes.txt && ./produto_clang 10 >> testes.txt
+	@echo "Teste com N=16" >> testes.txt && echo "gcc :" >> testes.txt && ./produto_gcc 16 >> testes.txt && echo "icx :" >> testes.txt && ./produto_icx 16 >> testes.txt && echo "dpcpp :" >> testes.txt && ./produto_dpcpp 16 >> testes.txt && echo "clang :" >> testes.txt && ./produto_clang 16 >> testes.txt
+	@echo "Teste com N=50" >> testes.txt && echo "gcc :" >> testes.txt && ./produto_gcc 50 >> testes.txt && echo "icx :" >> testes.txt && ./produto_icx 50 >> testes.txt && echo "dpcpp :" >> testes.txt && ./produto_dpcpp 50 >> testes.txt && echo "clang :" >> testes.txt && ./produto_clang 50 >> testes.txt
+	@echo "Teste com N=64" >> testes.txt && echo "gcc :" >> testes.txt && ./produto_gcc 64 >> testes.txt && echo "icx :" >> testes.txt && ./produto_icx 64 >> testes.txt && echo "dpcpp :" >> testes.txt && ./produto_dpcpp 64 >> testes.txt && echo "clang :" >> testes.txt && ./produto_clang 64 >> testes.txt
+	@echo "Teste com N=100" >> testes.txt && echo "gcc :" >> testes.txt && ./produto_gcc 100 >> testes.txt && echo "icx :" >> testes.txt && ./produto_icx 100 >> testes.txt && echo "dpcpp :" >> testes.txt && ./produto_dpcpp 100 >> testes.txt && echo "clang :" >> testes.txt && ./produto_clang 100 >> testes.txt
+	@echo "Teste com N=128" >> testes.txt && echo "gcc :" >> testes.txt && ./produto_gcc 128 >> testes.txt && echo "icx :" >> testes.txt && ./produto_icx 128 >> testes.txt && echo "dpcpp :" >> testes.txt && ./produto_dpcpp 128 >> testes.txt && echo "clang :" >> testes.txt && ./produto_clang 128 >> testes.txt
+	@echo "Teste com N=500" >> testes.txt && echo "gcc :" >> testes.txt && ./produto_gcc 500 >> testes.txt && echo "icx :" >> testes.txt && ./produto_icx 500 >> testes.txt && echo "dpcpp :" >> testes.txt && ./produto_dpcpp 500 >> testes.txt && echo "clang :" >> testes.txt && ./produto_clang 500 >> testes.txt
+	@echo "Teste com N=512" >> testes.txt && echo "gcc :" >> testes.txt && ./produto_gcc 512 >> testes.txt && echo "icx :" >> testes.txt && ./produto_icx 512 >> testes.txt && echo "dpcpp :" >> testes.txt && ./produto_dpcpp 512 >> testes.txt && echo "clang :" >> testes.txt && ./produto_clang 512 >> testes.txt
+	@echo "Teste com N=750" >> testes.txt && echo "gcc :" >> testes.txt && ./produto_gcc 750 >> testes.txt && echo "icx :" >> testes.txt && ./produto_icx 750 >> testes.txt && echo "dpcpp :" >> testes.txt && ./produto_dpcpp 750 >> testes.txt && echo "clang :" >> testes.txt && ./produto_clang 750 >> testes.txt
+	@echo "Teste com N=1000" >> testes.txt && echo "gcc :" >> testes.txt && ./produto_gcc 1000 >> testes.txt && echo "icx :" >> testes.txt && ./produto_icx 1000 >> testes.txt && echo "dpcpp :" >> testes.txt && ./produto_dpcpp 1000 >> testes.txt && echo "clang :" >> testes.txt && ./produto_clang 1000 >> testes.txt
+	@echo "Teste com N=1024" >> testes.txt && echo "gcc :" >> testes.txt && ./produto_gcc 1024 >> testes.txt && echo "icx :" >> testes.txt && ./produto_icx 1024 >> testes.txt && echo "dpcpp :" >> testes.txt && ./produto_dpcpp 1024 >> testes.txt && echo "clang :" >> testes.txt && ./produto_clang 1024 >> testes.txt
+	@echo "Teste com N=1250" >> testes.txt && echo "gcc :" >> testes.txt && ./produto_gcc 1250 >> testes.txt && echo "icx :" >> testes.txt && ./produto_icx 1250 >> testes.txt && echo "dpcpp :" >> testes.txt && ./produto_dpcpp 1250 >> testes.txt && echo "clang :" >> testes.txt && ./produto_clang 1250 >> testes.txt
+	@echo "Teste com N=1600" >> testes.txt && echo "gcc :" >> testes.txt && ./produto_gcc 1600 >> testes.txt && echo "icx :" >> testes.txt && ./produto_icx 1600 >> testes.txt && echo "dpcpp :" >> testes.txt && ./produto_dpcpp 1600 >> testes.txt && echo "clang :" >> testes.txt && ./produto_clang 1600 >> testes.txt
+	@echo "Teste com N=2000" >> testes.txt && echo "gcc :" >> testes.txt && ./produto_gcc 2000 >> testes.txt && echo "icx :" >> testes.txt && ./produto_icx 2000 >> testes.txt && echo "dpcpp :" >> testes.txt && ./produto_dpcpp 2000 >> testes.txt && echo "clang :" >> testes.txt && ./produto_clang 2000 >> testes.txt
+	@echo "Teste com N=2048" >> testes.txt && echo "gcc :" >> testes.txt && ./produto_gcc 2048 >> testes.txt && echo "icx :" >> testes.txt && ./produto_icx 2048 >> testes.txt && echo "dpcpp :" >> testes.txt && ./produto_dpcpp 2048 >> testes.txt && echo "clang :" >> testes.txt && ./produto_clang 2048 >> testes.txt
+	@echo "Teste com N=4096" >> testes.txt && echo "gcc :" >> testes.txt && ./produto_gcc 4096 >> testes.txt && echo "icx :" >> testes.txt && ./produto_icx 4096 >> testes.txt && echo "dpcpp :" >> testes.txt && ./produto_dpcpp 4096 >> testes.txt && echo "clang :" >> testes.txt && ./produto_clang 4096 >> testes.txt
+	@echo "Teste com N=5000" >> testes.txt && echo "gcc :" >> testes.txt && ./produto_gcc 5000 >> testes.txt && echo "icx :" >> testes.txt && ./produto_icx 5000 >> testes.txt && echo "dpcpp :" >> testes.txt && ./produto_dpcpp 5000 >> testes.txt && echo "clang :" >> testes.txt && ./produto_clang 5000 >> testes.txt
+	@echo "Teste com N=8192" >> testes.txt && echo "gcc :" >> testes.txt && ./produto_gcc 8192 >> testes.txt && echo "icx :" >> testes.txt && ./produto_icx 8192 >> testes.txt && echo "dpcpp :" >> testes.txt && ./produto_dpcpp 8192 >> testes.txt && echo "clang :" >> testes.txt && ./produto_clang 8192 >> testes.txt
+	@echo "Teste com N=10000" >> testes.txt && echo "gcc :" >> testes.txt && ./produto_gcc 10000 >> testes.txt && echo "icx :" >> testes.txt && ./produto_icx 10000 >> testes.txt && echo "dpcpp :" >> testes.txt && ./produto_dpcpp 10000 >> testes.txt && echo "clang :" >> testes.txt && ./produto_clang 10000 >> testes.txt

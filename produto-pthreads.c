@@ -16,7 +16,7 @@ int step_i = 0;
 
 void *compute_j_k(void *arg)
 {
-    int i = (int)arg;
+    int i = (*(int*)arg);
     int j, k;
     for (j = 0; j < N; j++)
     {
@@ -35,7 +35,6 @@ void ijk()
     int th_arg;
     pthread_t *threads;
     int *retornos;
-
     threads = (pthread_t *)malloc(NT * sizeof(pthread_t));
     retornos = (int *)malloc(NT * sizeof(int));
 
@@ -59,8 +58,8 @@ int main(int argc, char *argv[])
     double *timings[8];
     double mean[8], sigma[8];
     int nb_exp = 8;
-    double start;
-    double end;
+    struct timeval start;
+    struct timeval end;
 
     if (argc != 3)
     {
@@ -93,10 +92,10 @@ int main(int argc, char *argv[])
     for (j = 0; j < nb_exp; j++)
     {
         /* ijk babaca */
-        start = DCLOCK();
+        gettimeofday(&start, NULL);
         ijk();
-        end = DCLOCK();
-        timings[0][j] = end - start;
+        gettimeofday(&end, NULL);
+        timings[0][j] = (end.tv_sec - start.tv_sec) * 1000000 + end.tv_usec - start.tv_usec;
     }
 
     /* Estatisticas sobre os timings */

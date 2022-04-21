@@ -35,8 +35,8 @@ int main(int argc, char *argv[])
     double *timings[8];
     double mean[8], sigma[8];
     int nb_exp = 8;
-    double start;
-    double end;
+    struct timeval start;
+    struct timeval end;
 
     if (argc != 2)
     {
@@ -70,10 +70,10 @@ int main(int argc, char *argv[])
     for (j = 0; j < nb_exp; j++)
     {
         /* ijk babaca */
-        start = DCLOCK();
+        gettimeofday(&start, NULL);
         ijk(N, C, A, B);
-        end = DCLOCK();
-        timings[0][j] = end - start;
+        gettimeofday(&end, NULL);
+        timings[0][j] = (end.tv_sec - start.tv_sec) * 1000000 + end.tv_usec - start.tv_usec;
     }
     /* Estatisticas sobre os timings */
     /* Media */

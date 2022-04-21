@@ -1,0 +1,574 @@
+Teste com N=10
+gcc :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.00 sec. (desvio-p. :     0.00)
+icx :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.00 sec. (desvio-p. :     0.00)
+dpcpp :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.00 sec. (desvio-p. :     0.00)
+clang :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.00 sec. (desvio-p. :     0.00)
+Teste com N=16
+gcc :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.00 sec. (desvio-p. :     0.00)
+icx :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.00 sec. (desvio-p. :     0.00)
+dpcpp :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.00 sec. (desvio-p. :     0.00)
+clang :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.00 sec. (desvio-p. :     0.00)
+Teste com N=50
+gcc :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.00 sec. (desvio-p. :     0.00)
+icx :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.00 sec. (desvio-p. :     0.00)
+dpcpp :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.00 sec. (desvio-p. :     0.00)
+clang :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.00 sec. (desvio-p. :     0.00)
+Teste com N=64
+gcc :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.00 sec. (desvio-p. :     0.00)
+icx :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.00 sec. (desvio-p. :     0.00)
+dpcpp :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.00 sec. (desvio-p. :     0.00)
+clang :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.00 sec. (desvio-p. :     0.00)
+Teste com N=100
+gcc :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.00 sec. (desvio-p. :     0.00)
+icx :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.00 sec. (desvio-p. :     0.00)
+dpcpp :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.00 sec. (desvio-p. :     0.00)
+clang :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.00 sec. (desvio-p. :     0.00)
+Teste com N=128
+gcc :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.01 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.01 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.01 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.01 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.01 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.01 sec. (desvio-p. :     0.00)
+icx :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.01 sec. (desvio-p. :     0.00)
+dpcpp :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.01 sec. (desvio-p. :     0.00)
+clang :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.00 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.00 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.00 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.01 sec. (desvio-p. :     0.00)
+Teste com N=500
+gcc :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.56 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.38 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.35 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.32 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.22 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.31 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.22 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.56 sec. (desvio-p. :     0.00)
+icx :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.15 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.14 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.08 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.04 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.06 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.04 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.06 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.17 sec. (desvio-p. :     0.00)
+dpcpp :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.15 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.14 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.08 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.04 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.06 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.05 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.06 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.16 sec. (desvio-p. :     0.00)
+clang :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.15 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.14 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.08 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.04 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.06 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.04 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.06 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.16 sec. (desvio-p. :     0.00)
+Teste com N=512
+gcc :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.91 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.55 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.44 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.34 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.24 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.33 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.24 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.98 sec. (desvio-p. :     0.01)
+icx :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.24 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.23 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.22 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.04 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.06 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.05 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.07 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.68 sec. (desvio-p. :     0.00)
+dpcpp :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.24 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.23 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.22 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.04 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.06 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.05 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.07 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.67 sec. (desvio-p. :     0.00)
+clang :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.24 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.23 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.22 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.04 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.06 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.05 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.07 sec. (desvio-p. :     0.00)
+	 - ikj worst :     0.67 sec. (desvio-p. :     0.00)
+Teste com N=750
+gcc :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     1.98 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     1.32 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     1.20 sec. (desvio-p. :     0.00)
+	 - jki best  :     1.11 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.79 sec. (desvio-p. :     0.00)
+	 - jki blocos :     1.04 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.74 sec. (desvio-p. :     0.00)
+	 - ikj worst :     4.26 sec. (desvio-p. :     0.00)
+icx :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.54 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.53 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.32 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.17 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.24 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.14 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.21 sec. (desvio-p. :     0.00)
+	 - ikj worst :     2.45 sec. (desvio-p. :     0.00)
+dpcpp :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.55 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.53 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.33 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.17 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.24 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.17 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.21 sec. (desvio-p. :     0.00)
+	 - ikj worst :     3.05 sec. (desvio-p. :     0.00)
+clang :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     0.55 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     0.53 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     0.33 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.17 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.24 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.14 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.21 sec. (desvio-p. :     0.00)
+	 - ikj worst :     3.15 sec. (desvio-p. :     0.00)
+Teste com N=1000
+gcc :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     6.51 sec. (desvio-p. :     0.01)
+	 - ijk buffer:     4.97 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     4.53 sec. (desvio-p. :     0.00)
+	 - jki best  :     2.71 sec. (desvio-p. :     0.01)
+	 - jki best unroll  :     1.94 sec. (desvio-p. :     0.00)
+	 - jki blocos :     2.47 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     1.75 sec. (desvio-p. :     0.00)
+	 - ikj worst :    16.93 sec. (desvio-p. :     0.01)
+icx :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     2.58 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     2.56 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     2.48 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.56 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.66 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.33 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.50 sec. (desvio-p. :     0.00)
+	 - ikj worst :    17.71 sec. (desvio-p. :     0.00)
+dpcpp :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     3.16 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     3.12 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     3.10 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.56 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.66 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.39 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.50 sec. (desvio-p. :     0.00)
+	 - ikj worst :    17.20 sec. (desvio-p. :     0.00)
+clang :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     3.09 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     3.07 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     3.03 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.56 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.65 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.33 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.50 sec. (desvio-p. :     0.00)
+	 - ikj worst :    17.23 sec. (desvio-p. :     0.00)
+Teste com N=1024
+gcc :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:    15.49 sec. (desvio-p. :     0.01)
+	 - ijk buffer:    10.91 sec. (desvio-p. :     0.09)
+	 - ijk buffer unroll :     8.92 sec. (desvio-p. :     0.07)
+	 - jki best  :     2.91 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     2.07 sec. (desvio-p. :     0.00)
+	 - jki blocos :     2.70 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     1.94 sec. (desvio-p. :     0.00)
+	 - ikj worst :    31.77 sec. (desvio-p. :     0.04)
+icx :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     3.43 sec. (desvio-p. :     0.01)
+	 - ijk buffer:     3.39 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     3.40 sec. (desvio-p. :     0.00)
+	 - jki best  :     0.61 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.70 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.39 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.61 sec. (desvio-p. :     0.00)
+	 - ikj worst :    40.69 sec. (desvio-p. :     0.04)
+dpcpp :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     3.38 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     3.31 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     3.31 sec. (desvio-p. :     0.01)
+	 - jki best  :     0.60 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.70 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.43 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.61 sec. (desvio-p. :     0.00)
+	 - ikj worst :    40.40 sec. (desvio-p. :     0.02)
+clang :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     3.42 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     3.40 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     3.44 sec. (desvio-p. :     0.01)
+	 - jki best  :     0.60 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     0.70 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.39 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.61 sec. (desvio-p. :     0.00)
+	 - ikj worst :    39.96 sec. (desvio-p. :     0.05)
+Teste com N=1250
+gcc :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:    13.83 sec. (desvio-p. :     0.01)
+	 - ijk buffer:     9.71 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     8.29 sec. (desvio-p. :     0.00)
+	 - jki best  :     5.29 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     3.78 sec. (desvio-p. :     0.00)
+	 - jki blocos :     4.80 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     3.43 sec. (desvio-p. :     0.00)
+	 - ikj worst :    39.26 sec. (desvio-p. :     0.01)
+icx :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     4.46 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     4.41 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     4.20 sec. (desvio-p. :     0.00)
+	 - jki best  :     1.17 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     1.34 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.64 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.97 sec. (desvio-p. :     0.00)
+	 - ikj worst :    40.27 sec. (desvio-p. :     0.03)
+dpcpp :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     4.44 sec. (desvio-p. :     0.01)
+	 - ijk buffer:     4.39 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     4.18 sec. (desvio-p. :     0.00)
+	 - jki best  :     1.16 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     1.33 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.77 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.97 sec. (desvio-p. :     0.00)
+	 - ikj worst :    39.58 sec. (desvio-p. :     0.01)
+clang :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:     4.82 sec. (desvio-p. :     0.00)
+	 - ijk buffer:     4.76 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :     4.60 sec. (desvio-p. :     0.00)
+	 - jki best  :     1.16 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     1.33 sec. (desvio-p. :     0.00)
+	 - jki blocos :     0.64 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     0.97 sec. (desvio-p. :     0.00)
+	 - ikj worst :    39.47 sec. (desvio-p. :     0.01)
+Teste com N=1600
+gcc :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:    38.97 sec. (desvio-p. :     0.01)
+	 - ijk buffer:    28.10 sec. (desvio-p. :     0.01)
+	 - ijk buffer unroll :    25.24 sec. (desvio-p. :     0.01)
+	 - jki best  :    11.06 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     7.85 sec. (desvio-p. :     0.00)
+	 - jki blocos :    10.09 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     7.16 sec. (desvio-p. :     0.00)
+	 - ikj worst :    77.68 sec. (desvio-p. :     0.02)
+icx :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:    22.31 sec. (desvio-p. :     0.01)
+	 - ijk buffer:    22.01 sec. (desvio-p. :     0.01)
+	 - ijk buffer unroll :    22.31 sec. (desvio-p. :     0.00)
+	 - jki best  :     2.50 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     2.71 sec. (desvio-p. :     0.00)
+	 - jki blocos :     1.33 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     1.91 sec. (desvio-p. :     0.00)
+	 - ikj worst :    79.06 sec. (desvio-p. :     0.01)
+dpcpp :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:    22.78 sec. (desvio-p. :     0.00)
+	 - ijk buffer:    22.49 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :    22.82 sec. (desvio-p. :     0.00)
+	 - jki best  :     2.51 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     2.71 sec. (desvio-p. :     0.00)
+	 - jki blocos :     1.61 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     1.91 sec. (desvio-p. :     0.00)
+	 - ikj worst :    80.28 sec. (desvio-p. :     0.01)
+clang :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:    22.38 sec. (desvio-p. :     0.00)
+	 - ijk buffer:    22.17 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :    22.45 sec. (desvio-p. :     0.01)
+	 - jki best  :     2.51 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     2.72 sec. (desvio-p. :     0.00)
+	 - jki blocos :     1.33 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     1.91 sec. (desvio-p. :     0.00)
+	 - ikj worst :    80.42 sec. (desvio-p. :     0.01)
+Teste com N=2000
+gcc :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:    84.69 sec. (desvio-p. :     0.01)
+	 - ijk buffer:    73.32 sec. (desvio-p. :     0.01)
+	 - ijk buffer unroll :    71.62 sec. (desvio-p. :     0.01)
+	 - jki best  :    21.65 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :    15.39 sec. (desvio-p. :     0.00)
+	 - jki blocos :    19.69 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :    13.99 sec. (desvio-p. :     0.00)
+	 - ikj worst :   151.69 sec. (desvio-p. :     0.01)
+icx :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:    73.89 sec. (desvio-p. :     0.01)
+	 - ijk buffer:    73.77 sec. (desvio-p. :     0.01)
+	 - ijk buffer unroll :    77.15 sec. (desvio-p. :     0.01)
+	 - jki best  :     5.01 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     5.36 sec. (desvio-p. :     0.00)
+	 - jki blocos :     2.63 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     4.00 sec. (desvio-p. :     0.00)
+	 - ikj worst :   163.87 sec. (desvio-p. :     0.01)
+dpcpp :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:    73.77 sec. (desvio-p. :     0.01)
+	 - ijk buffer:    73.60 sec. (desvio-p. :     0.00)
+	 - ijk buffer unroll :    77.04 sec. (desvio-p. :     0.01)
+	 - jki best  :     4.99 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     5.35 sec. (desvio-p. :     0.00)
+	 - jki blocos :     3.16 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     4.00 sec. (desvio-p. :     0.00)
+	 - ikj worst :   162.51 sec. (desvio-p. :     0.01)
+clang :
+Duracao media dos produtos (8 experiencias):
+	 - ijk basico:    71.93 sec. (desvio-p. :     0.01)
+	 - ijk buffer:    72.02 sec. (desvio-p. :     0.23)
+	 - ijk buffer unroll :    74.86 sec. (desvio-p. :     0.01)
+	 - jki best  :     5.00 sec. (desvio-p. :     0.00)
+	 - jki best unroll  :     5.34 sec. (desvio-p. :     0.00)
+	 - jki blocos :     2.62 sec. (desvio-p. :     0.00)
+	 - jki blocos unroll :     3.99 sec. (desvio-p. :     0.00)
+	 - ikj worst :   163.67 sec. (desvio-p. :     0.02)
