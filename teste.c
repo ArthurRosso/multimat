@@ -4,16 +4,10 @@
 #include <time.h>
 #include <math.h>
 #include <limits.h>
-#include <omp.h>
-
-#define THREADS 16
 
 void ijk(int n, double *C, double *A, double *B)
 {
     int i, j, k;
-    omp_set_dynamic(1);
-    omp_set_num_threads(THREADS);
-    #pragma omp parallel shared(A, B, C) private(i, j, k)
     for (i = 0; i < n; i++)
     {
         for (j = 0; j < n; j++)
@@ -27,7 +21,7 @@ void ijk(int n, double *C, double *A, double *B)
 }
 
 int main(int argc, char *argv[])
-{ // gcc produto-openmp.c -o produto-openmp -lm -fopenmp && ./produto-openmp 512
+{ // gcc teste.c -o teste -lm && ./teste 160
     int i, j, k;
     int N;
     double *A;
