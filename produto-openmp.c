@@ -6,13 +6,11 @@
 #include <limits.h>
 #include <omp.h>
 
-#define THREADS 16
-
 void ijk(int n, double *C, double *A, double *B)
 {
     int i, j, k;
     omp_set_dynamic(1);
-    omp_set_num_threads(THREADS);
+    omp_set_num_threads(n);
     #pragma omp parallel shared(A, B, C) private(i, j, k)
     for (i = 0; i < n; i++)
     {
