@@ -31,9 +31,9 @@ int main(int argc, char *argv[])
     double *A;
     double *B;
     double *C;
-    double *timings[8];
-    double mean[8], sigma[8];
-    int nb_exp = 1;
+    double *timings;
+    double mean, sigma;
+    int nb_exp = 8;
     struct timeval start;
     struct timeval end;
 
@@ -54,17 +54,9 @@ int main(int argc, char *argv[])
         B[i] = ((double)rand() / INT_MAX);
     }
 
-    for (i = 0; i < 8; i++)
-    {
-        mean[i] = 0.0;
-        sigma[i] = 0.0;
-        timings[i] = (double *)malloc(nb_exp * sizeof(double));
-        /* timings[0][j] : tempo da execução j do algoritmo ijk
-         * timings[1][j] : tempo da execução j do algoritmo ijk-buffer
-         * timings[2][j] : tempo da execução j do algoritmo ikj-worst
-         * timings[3][j] : tempo da execução j do algoritmo jki-best.
-         */
-    }
+    mean = 0.0;
+    sigma = 0.0;
+    timings = (double *)malloc(nb_exp * sizeof(double));
 
     for (j = 0; j < nb_exp; j++)
     {
@@ -72,31 +64,32 @@ int main(int argc, char *argv[])
         gettimeofday(&start, NULL);
         ijk(N, C, A, B);
         gettimeofday(&end, NULL);
-        timings[0][j] = (end.tv_sec - start.tv_sec) * 1000000 + end.tv_usec - start.tv_usec;
-    }
-    /* Estatisticas sobre os timings */
-    /* Media */
-    for (i = 0; i < 8; i++)
-    {
-        for (j = 0; j < nb_exp; j++)
-        {
-            mean[i] += timings[i][j];
-        }
-        mean[i] /= nb_exp;
-    }
-    /* Desvio padrao */
-    for (i = 0; i < 8; i++)
-    {
-        sigma[i] = 0;
-        for (j = 0; j < nb_exp; j++)
-        {
-            sigma[i] += (mean[i] - timings[i][j]) * (mean[i] - timings[i][j]);
-        }
-        sigma[i] = sqrt(sigma[i]) * 1e-6 / nb_exp;
+        timings[j] = (end.tv_sec - start.tv_sec) * 1000000 + end.tv_usec - start.tv_usec;
     }
 
-    printf("Duracao media dos produtos (%d experiencias):\n", nb_exp);
-    printf("\t - ijk basico: %8.2lf sec. (desvio-p. : %8.2lf)\n", mean[0] * 1e-6, sigma[0]);
+    /* Estatisticas sobre os timings */
+	/* Media */
+		for (j = 0; j < nb_exp; j++)
+		{
+			mean += timings[j];
+		}
+		mean /= nb_exp;
+	
+	/* Desvio padrao */
+    sigma = 0;
+    for (j = 0; j < nb_exp; j++)
+    {
+        sigma += (mean - timings[j]) * (mean - timings[j]);
+    }
+    sigma = sqrt(sigma) * 1e-6 / nb_exp;
+
+    printf("Duracao media dos produtos (%d experiencias) com openmp:\n", nb_exp);
+	printf("\t - ijk basico: %8.2lf sec. (desvio-p. : %8.2lf)\n", mean * 1e-6, sigma);
+
+	free(A);
+	free(B);
+	free(C);
+	free(timings);
 
     return 0;
 }

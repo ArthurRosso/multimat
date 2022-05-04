@@ -1,120 +1,142 @@
+// C Program to multiply two matrix using pthreads without
+// use of global variables
 #include <stdio.h>
-#include <stdlib.h>
-#include <sys/time.h>
-#include <time.h>
-#include <math.h>
-#include <limits.h>
 #include <pthread.h>
 #include <unistd.h>
+#include <stdlib.h>
+#include <sys/time.h>
+#include <math.h>
+#include <limits.h>
 
-int N;
-int NT;
-double *A;
-double *B;
-double *C;
-int step_i = 0;
-
-void *compute_j_k(void *arg)
+// Each thread computes single element in the resultant matrix
+void *mult(void *arg)
 {
-    int i = (*(int*)arg);
-    int j, k;
-    for (j = 0; j < N; j++)
+    int *data = (int *)arg;
+    int c2 = data[0];
+    int c1 = data[1];
+
+    int i = 0, j = 0;
+    int *res = (int *)malloc(c2 * sizeof(int));
+
+    data += 2;
+    for (j = 0; j < c2; j++)
     {
-        for (k = 0; k < N; k++)
+        int k = 0;
+        for (i = 0; i < c1; i++)
         {
-            C[j * N + i] += A[k * N + i] * B[j * N + k];
+            k += data[i + (c1 * 2 * j)] * data[i + c1 + (c1 * 2 * j)];
         }
+
+        res[j] = k;
     }
+
+    free(arg);
+    // Used to terminate a thread and the return value is passed as a pointer
+    pthread_exit(res);
 }
 
-/* A versao ijk básica */
-void ijk()
-{
-    int i, j, k;
-    int th_id;
-    int th_arg;
-    pthread_t *threads;
-    int *retornos;
-    threads = (pthread_t *)malloc(NT * sizeof(pthread_t));
-    retornos = (int *)malloc(NT * sizeof(int));
-
-    for (i = 0; i < N; i += NT)
-    {
-        for (th_id = 0; th_id < NT; th_id++)
-        {
-            th_arg = i + th_id;
-            retornos[th_id] = pthread_create(&(threads[th_id]), NULL, compute_j_k, (void *)th_arg);
-        }
-        for (th_id = 0; th_id < NT; th_id++)
-        {
-            pthread_join(threads[th_id], NULL);
-        }
-    }
-}
-
+// Driver code
 int main(int argc, char *argv[])
 {
-    int i, j, k;
-    double *timings[8];
-    double mean[8], sigma[8];
+    int i, j, k, n;
+    int N;
+    int *A;
+    int *B;
+    int *C;
+    double *timings;
+    double mean, sigma;
     int nb_exp = 8;
     struct timeval start;
     struct timeval end;
 
-    if (argc != 3)
+    if (argc != 2)
     {
         printf("%d nro param", argc);
         return -1;
     }
     N = atoi(argv[1]);
-    NT = atoi(argv[2]);
 
     srand(time(NULL));
-    A = (double *)malloc(N * N * sizeof(double));
-    B = (double *)malloc(N * N * sizeof(double));
-    C = (double *)malloc(N * N * sizeof(double));
+    A = (int *)malloc(N * N * sizeof(int));
+    B = (int *)malloc(N * N * sizeof(int));
+    C = (int *)malloc(N * N * sizeof(int));
     for (i = 0; i < N * N; i++)
     {
-        A[i] = ((double)rand() / INT_MAX);
-        B[i] = ((double)rand() / INT_MAX);
+        A[i] = rand() % INT_MAX;
+        B[i] = rand() % INT_MAX;
     }
 
-    for (i = 0; i < 8; i++)
-    {
-        mean[i] = 0.0;
-        sigma[i] = 0.0;
-        timings[i] = (double *)malloc(nb_exp * sizeof(double));
-    }
+    mean = 0.0;
+    sigma = 0.0;
+    timings = (double *)malloc(nb_exp * sizeof(double));
 
-    // declaring our threads
-    pthread_t threads[NT];
+    // declaring array of threads of size r1*c2
+    pthread_t *threads;
+    threads = (pthread_t *)malloc(N * sizeof(pthread_t));
 
-    for (j = 0; j < nb_exp; j++)
+
+    for (n = 0; n < nb_exp; n++)
     {
-        /* ijk babaca */
         gettimeofday(&start, NULL);
-        ijk();
+        int count = 0;
+        int *data = NULL;
+        for (i = 0; i < N; i++)
+        {
+
+            // storing row and column elements in data
+            data = (int *)malloc(((N + N) * N + 2) * sizeof(int)); // armazenar lin e col necessárias para calcular os elementos
+            data[0] = N;
+            data[1] = N;
+
+            for (j = 0; j < N; j++)
+            {
+
+                for (k = 0; k < N; k++)
+                {
+                    data[k + 2 + (N * 2 * j)] = A[i + N * k];
+                }
+
+                for (k = 0; k < N; k++)
+                {
+                    data[k + N + 2 + (N * 2 * j)] = B[k + N * j];
+                }
+            }
+            // creating threads
+            pthread_create(&threads[count++], NULL, mult, (void *)(data));
+        }
+        count = 0;
+        for (i = 0; i < N; i++)
+        {
+            pthread_join(threads[count++], NULL);
+        }
         gettimeofday(&end, NULL);
-        timings[0][j] = (end.tv_sec - start.tv_sec) * 1000000 + end.tv_usec - start.tv_usec;
+        timings[n] = (end.tv_sec - start.tv_sec) * 1000000 + end.tv_usec - start.tv_usec;
     }
 
     /* Estatisticas sobre os timings */
-    /* Media */
+	/* Media */
+		for (j = 0; j < nb_exp; j++)
+		{
+			mean += timings[j];
+		}
+		mean /= nb_exp;
+	
+	/* Desvio padrao */
+    sigma = 0;
     for (j = 0; j < nb_exp; j++)
     {
-        mean[0] += timings[0][j];
+        sigma += (mean - timings[j]) * (mean - timings[j]);
     }
-    mean[0] /= nb_exp;
-    /* Desvio padrao */
-    sigma[0] = 0;
-    for (j = 0; j < nb_exp; j++)
-    {
-        sigma[0] += (mean[0] - timings[0][j]) * (mean[0] - timings[0][j]);
-    }
-    sigma[0] = sqrt(sigma[0]) * 1e-6 / nb_exp;
+    sigma = sqrt(sigma) * 1e-6 / nb_exp;
 
-    printf("Duracao media dos produtos (%d experiencias):\n", nb_exp);
-    printf("\t - ijk basico: %8.2lf sec. (desvio-p. : %8.2lf)\n", mean[0] * 1e-6, sigma[0]);
+    printf("Duracao media dos produtos (%d experiencias) com pthreads:\n", nb_exp);
+	printf("\t - ijk basico: %8.2lf sec. (desvio-p. : %8.2lf)\n", mean * 1e-6, sigma);
+
+	free(A);
+	free(B);
+	free(C);
+	free(timings);
+	
 
     return 0;
 }

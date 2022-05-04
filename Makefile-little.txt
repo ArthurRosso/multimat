@@ -1,0 +1,45 @@
+all: produto_gcc  produto_clang produto-openmp_gcc produto-openmp_clang produto-pthreads_gcc produto-pthreads_clang
+
+produto_gcc: produto_gcc.o
+	@gcc produto_gcc.o -o produto_gcc -lm -Ofast -march=native -mtune=native
+
+produto_gcc.o: produto.c
+	@gcc -c produto.c -o produto_gcc.o
+
+produto_clang: produto_clang.o 
+	@clang produto_clang.o -o produto_clang -lm -Ofast -march=native -mtune=native
+
+produto_clang.o: produto.c
+	@clang -c produto.c -o produto_clang.o
+
+produto-openmp_gcc: produto-openmp_gcc.o
+	@gcc produto-openmp_gcc.o -o produto-openmp_gcc -fopenmp -lm -Ofast -march=native -mtune=native
+
+produto-openmp_gcc.o: produto-openmp.c
+	@gcc -c produto-openmp.c -o produto-openmp_gcc.o
+
+produto-openmp_clang: produto-openmp_clang.o 
+	@clang produto-openmp_clang.o -o produto-openmp_clang -fopenmp=libomp -lm -Ofast -march=native -mtune=native
+
+produto-openmp_clang.o: produto-openmp.c
+	@clang -c produto-openmp.c -o produto-openmp_clang.o
+
+produto-pthreads_gcc: produto-pthreads_gcc.o
+	@gcc produto-pthreads_gcc.o -o produto-pthreads_gcc -lm -Ofast -march=native -mtune=native
+
+produto-pthreads_gcc.o: produto-pthreads.c
+	@gcc -c produto-pthreads.c -o produto-pthreads_gcc.o
+
+produto-pthreads_clang: produto-pthreads_clang.o 
+	@clang produto-pthreads_clang.o -o produto-pthreads_clang -lm -Ofast -march=native -mtune=native
+
+produto-pthreads_clang.o: produto-pthreads.c
+	@clang -c produto-pthreads.c -o produto-pthreads_clang.o
+
+clean:
+	@rm produto_gcc produto_gcc.o  .o produto_dpcpp produto_dpcpp.o produto_clang produto_clang.o
+
+run:
+	@echo "Teste com N=1000" >> testes.txt && echo "gcc :" >> testes.txt && ./produto_gcc 1000 >> testes.txt && echo "clang :" >> testes.txt && ./produto_clang 1000 >> testes.txt
+	@echo "Teste com N=1000" >> testes-openmp.txt && echo "gcc :" >> testes-openmp.txt && ./produto-openmp_gcc 1000 >> testes-openmp.txt && echo "clang :" >> testes-openmp.txt && ./produto-openmp_clang 1000 >> testes-openmp.txt
+	@echo "Teste com N=1000" >> testes-pthreads.txt && echo "gcc :" >> testes-pthreads.txt && ./produto-pthreads_gcc 1000 >> testes-pthreads.txt && echo "clang :" >> testes-pthreads.txt && ./produto-pthreads_clang 1000 >> testes-pthreads.txt
